@@ -4,11 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dalila Velvet :: Drag Queen :: La perra más alta de Colombia</title>
+    <title>Dalila Velvet</title>
     <meta name="description" content="Dalila Veltet, la perra más alta de Colombia. Drag Queen ">
     <meta name="author " content="@LuisAngelMaciel ">
     <meta name="generator " content="@LuisAngelMaciel">
-    <link rel="stylesheet" href="css/name-dalilavelvet.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap");
+        * {
+            box-sizing: border-box;
+        }
+        
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background: #f2f0ed;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            font-family: "Work Sans", sans-serif;
+            font-size: 1em;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .link {
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            font-size: 3em;
+            color: #808080;
+            text-transform: uppercase;
+            transition: color 275ms ease;
+        }
+        
+        .link:hover {
+            color: #333;
+        }
+        
+        .link:hover~.hover-container .link-text {
+            opacity: 1;
+        }
+        
+        .link:hover~.hover-container .image-container {
+            opacity: 1;
+        }
+        
+        .link-text {
+            z-index: 2;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 3em;
+            color: #fff;
+            text-transform: uppercase;
+            pointer-events: none;
+            -webkit-clip-path: circle(75px at var(--x) var(--y));
+            clip-path: circle(75px at var(--x) var(--y));
+            opacity: 0;
+            transition: opacity 250ms ease;
+        }
+        
+        .image-container {
+            z-index: -2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+            transition: opacity 250ms ease;
+        }
+        
+        .image-inner {
+            position: absolute;
+            top: -75px;
+            left: -75px;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .link-image {
+            display: block;
+            max-width: 100%;
+            width: 300px;
+            height: 300px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            border-radius: 50%;
+            filter: brightness(0.9);
+        }
+    </style>
 
 </head>
 
